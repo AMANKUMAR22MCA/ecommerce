@@ -1,6 +1,15 @@
 ## 🛒 E-Commerce Application
 
-A fully-featured e-commerce app built with Django, JavaScript, and Bootstrap to provide an intuitive shopping experience. This app allows users to add, update, and delete items in their shopping cart, while offering a seamless experience for both authenticated users and guests.
+A fully-featured e-commerce app built with Django, JavaScript, and Bootstrap to provide an intuitive shopping experience. This app allows users to add, update, and delete items in their shopping cart, while offering a seamless experience for both authenticated users and guests. <br>
+
+![image](https://github.com/user-attachments/assets/766fa6e7-c9ef-446e-a1c9-619575468b38)
+<br>
+![image](https://github.com/user-attachments/assets/5b0cae72-14cd-4b79-9548-23faedeb7552)
+<br>
+![image](https://github.com/user-attachments/assets/beb50341-1e62-4f42-81f2-b2359c31d950)
+
+
+
 
 ## 📊 Features
 
