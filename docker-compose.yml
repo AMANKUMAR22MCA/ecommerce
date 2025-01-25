@@ -1,0 +1,35 @@
+services:
+  django:
+    build: .
+    container_name: django_app
+    command: gunicorn --bind 0.0.0.0:8000 ecommerce.wsgi:application
+    volumes:
+      - ./static:/app/staticfiles
+      - ./media:/app/media
+      - ./db.sqlite3:/app/db.sqlite3  # Mount SQLite database file
+    expose:
+      - 8000
+    networks:
+      - ecommerce_network
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx_server
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./static:/static:ro
+      - ./media:/media:ro
+    ports:
+      - "8001:80"
+    depends_on:
+      - django
+    networks:
+      - ecommerce_network
+    # entrypoint: /bin/sh -c "wait-for-it.sh django_app:8000 -- nginx -g 'daemon off;'"
+
+networks:
+  ecommerce_network:
+    driver: bridge
+
+volumes:
+  static_volume:
