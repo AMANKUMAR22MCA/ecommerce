@@ -1,4 +1,4 @@
-{% extends 'store/main.html' %}
+{% extends 'main.html' %}
 {% load static %}
 {% block content %}
      <div class="row">
@@ -134,7 +134,7 @@
 	    	console.log('Shipping Info:', shippingInfo)
 	    	console.log('User Info:', userFormData)
 
-	    	var url = "http://localhost:8000/process_order/"
+	    	var url = "/process_order/"
 	    	fetch(url, {
 	    		method:'POST',
 	    		headers:{
