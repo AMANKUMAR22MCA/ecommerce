@@ -4,7 +4,7 @@ services:
     container_name: django_app
     command: gunicorn --bind 0.0.0.0:8000 ecommerce.wsgi:application
     volumes:
-      - ./static:/app/staticfiles
+      - ./static:/app/static
       - ./media:/app/media
       - ./db.sqlite3:/app/db.sqlite3  # Mount SQLite database file
     expose:
